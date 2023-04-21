@@ -2,16 +2,18 @@
 
 MPU motionSensor;
 
-void setup() {
+void setup()
+{
   motionSensor.initialize();
 
   motionSensor.disableAccelerometer();
   motionSensor.disableTemperature();
   motionSensor.disableGyroscope();
-  
+
   Serial.begin(9600);
 }
 
-void loop() {
+void loop()
+{
   
 }

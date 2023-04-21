@@ -1,22 +1,24 @@
 #include <MPU.h>
 
-int accelerometerXAxis;
-int accelerometerYAxis;
-int accelerometerZAxis;
-int temperature;
-int gyroscopeXAxis;
-int gyroscopeYAxis;
-int gyroscopeZAxis;
+short int accelerometerXAxis;
+short int accelerometerYAxis;
+short int accelerometerZAxis;
+short int temperature;
+short int gyroscopeXAxis;
+short int gyroscopeYAxis;
+short int gyroscopeZAxis;
 
 MPU motionSensor;
 
-void setup() {
+void setup()
+{
   motionSensor.initialize();
-  
+
   Serial.begin(9600);
 }
 
-void loop() {
+void loop()
+{
   motionSensor.readAccelerometer(&accelerometerXAxis, &accelerometerYAxis, &accelerometerZAxis);
 
   Serial.println("Accelerometer:");

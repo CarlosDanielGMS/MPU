@@ -30,24 +30,24 @@
 class MPU
 {
 private:
-  void changeRegister(int, int);
-  int readRegister(int);
+  void changeRegister(unsigned char, unsigned char);
+  unsigned char readRegister(unsigned char);
 
 public:
   void initialize();
 
-  int readAccelerometerXAxis();
-  int readAccelerometerYAxis();
-  int readAccelerometerZAxis();
-  void readAccelerometer(int *, int *, int *);
+  short int readAccelerometerXAxis();
+  short int readAccelerometerYAxis();
+  short int readAccelerometerZAxis();
+  void readAccelerometer(short int *, short int *, short int *);
 
-  int readTemperature();
+  short int readTemperature();
 
-  int readGyroscopeXAxis();
-  int readGyroscopeYAxis();
-  int readGyroscopeZAxis();
-  void readGyroscope(int *, int *, int *);
-  
+  short int readGyroscopeXAxis();
+  short int readGyroscopeYAxis();
+  short int readGyroscopeZAxis();
+  void readGyroscope(short int *, short int *, short int *);
+
   void disableAccelerometer();
   void disableTemperature();
   void disableGyroscope();

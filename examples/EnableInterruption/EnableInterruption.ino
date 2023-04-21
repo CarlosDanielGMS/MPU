@@ -22,15 +22,17 @@ void sleep()
   sleep_cpu();
 }
 
-void setup() {
+void setup()
+{
   pinMode(INTERRUPTION_PIN, INPUT);
 
   motionSensor.initialize();
-  
+
   Serial.begin(9600);
 }
 
-void loop() {
+void loop()
+{
   if (conditionToSleep == true)
   {
     sleep();
